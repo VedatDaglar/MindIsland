@@ -6,13 +6,50 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0B69FAC233A69481DF432DFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E092F171D0434529A407C8D /* Foundation.framework */; };
+		5F12398C00E671E2C14A02F7 /* FocusGardenWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00E5C272862C28E56EB75253 /* FocusGardenWidgetExtension.appex */; };
+		66771BC73F77B55DF9806F16 /* FocusSessionActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE811A92AFBD0C645FC72C /* FocusSessionActivity.swift */; };
+		D68C4B023C4CC95EF0AFFC6E /* FocusGardenWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3A17BA29F8FD03C8F9C667 /* FocusGardenWidgetBundle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0E8E0D2EADDA0A3DADEB2EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1C281682F66050E008F712E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CB133ABD2FAA92327662EF8;
+			remoteInfo = FocusGardenWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC596A09A33BF89063E6B3B9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5F12398C00E671E2C14A02F7 /* FocusGardenWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		00E5C272862C28E56EB75253 /* FocusGardenWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FocusGardenWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E092F171D0434529A407C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AE3A17BA29F8FD03C8F9C667 /* FocusGardenWidgetBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FocusGardenWidgetBundle.swift; sourceTree = "<group>"; };
 		D1C281702F66050E008F712E /* FocusGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8BE811A92AFBD0C645FC72C /* FocusSessionActivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FocusSessionActivity.swift; path = FocusGarden/FocusSessionActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D1C281722F66050E008F712E /* FocusGarden */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = FocusGarden;
 			sourceTree = "<group>";
 		};
@@ -26,14 +63,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5A30773E566EC7E519009C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B69FAC233A69481DF432DFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2208AA73F69B3D53C93A24 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E092F171D0434529A407C8D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4C8B7E89A83863F115E6F75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B2208AA73F69B3D53C93A24 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1C281672F66050E008F712E = {
 			isa = PBXGroup;
 			children = (
 				D1C281722F66050E008F712E /* FocusGarden */,
 				D1C281712F66050E008F712E /* Products */,
+				4C8B7E89A83863F115E6F75C /* Frameworks */,
+				EABE944D9FF291C9298AA450 /* FocusGardenWidgetExtension */,
+				E8BE811A92AFBD0C645FC72C /* FocusSessionActivity.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,13 +105,40 @@
 			isa = PBXGroup;
 			children = (
 				D1C281702F66050E008F712E /* FocusGarden.app */,
+				00E5C272862C28E56EB75253 /* FocusGardenWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EABE944D9FF291C9298AA450 /* FocusGardenWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AE3A17BA29F8FD03C8F9C667 /* FocusGardenWidgetBundle.swift */,
+			);
+			name = FocusGardenWidgetExtension;
+			path = FocusGardenWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1CB133ABD2FAA92327662EF8 /* FocusGardenWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A35C4139F1E31565A8B262C /* Build configuration list for PBXNativeTarget "FocusGardenWidgetExtension" */;
+			buildPhases = (
+				24EE99CA4099C5281090637C /* Sources */,
+				D5A30773E566EC7E519009C4 /* Frameworks */,
+				9F70AF21488158B49C22A800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocusGardenWidgetExtension;
+			productName = FocusGardenWidgetExtension;
+			productReference = 00E5C272862C28E56EB75253 /* FocusGardenWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D1C2816F2F66050E008F712E /* FocusGarden */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1C2817D2F66050F008F712E /* Build configuration list for PBXNativeTarget "FocusGarden" */;
@@ -55,17 +146,17 @@
 				D1C2816C2F66050E008F712E /* Sources */,
 				D1C2816D2F66050E008F712E /* Frameworks */,
 				D1C2816E2F66050E008F712E /* Resources */,
+				FC596A09A33BF89063E6B3B9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A44B866D0F94F6A18239A64F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D1C281722F66050E008F712E /* FocusGarden */,
 			);
 			name = FocusGarden;
-			packageProductDependencies = (
-			);
 			productName = FocusGarden;
 			productReference = D1C281702F66050E008F712E /* FocusGarden.app */;
 			productType = "com.apple.product-type.application";
@@ -80,6 +171,9 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					1CB133ABD2FAA92327662EF8 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					D1C2816F2F66050E008F712E = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -91,6 +185,8 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				"zh-Hans",
 			);
 			mainGroup = D1C281672F66050E008F712E;
 			minimizedProjectReferenceProxies = 1;
@@ -100,11 +196,19 @@
 			projectRoot = "";
 			targets = (
 				D1C2816F2F66050E008F712E /* FocusGarden */,
+				1CB133ABD2FAA92327662EF8 /* FocusGardenWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F70AF21488158B49C22A800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1C2816E2F66050E008F712E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +219,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		24EE99CA4099C5281090637C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68C4B023C4CC95EF0AFFC6E /* FocusGardenWidgetBundle.swift in Sources */,
+				66771BC73F77B55DF9806F16 /* FocusSessionActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1C2816C2F66050E008F712E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +237,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A44B866D0F94F6A18239A64F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FocusGardenWidgetExtension;
+			target = 1CB133ABD2FAA92327662EF8 /* FocusGardenWidgetExtension */;
+			targetProxy = F0E8E0D2EADDA0A3DADEB2EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1DBF58E098F8D8980BB89086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = FocusGardenWidgetExtension/FocusGardenWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TA4985CS4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FocusGardenWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vedatdaglar.FocusGarden.FocusGardenWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DF06D8C817610DBE9AC37EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = FocusGardenWidgetExtension/FocusGardenWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TA4985CS4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FocusGardenWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vedatdaglar.FocusGarden.FocusGardenWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		D1C2817B2F66050F008F712E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,10 +428,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FocusGarden.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TA4985CS4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MindIsland;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,10 +464,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FocusGarden.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TA4985CS4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MindIsland;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +498,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A35C4139F1E31565A8B262C /* Build configuration list for PBXNativeTarget "FocusGardenWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBF58E098F8D8980BB89086 /* Release */,
+				7DF06D8C817610DBE9AC37EC /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D1C2816B2F66050E008F712E /* Build configuration list for PBXProject "FocusGarden" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
