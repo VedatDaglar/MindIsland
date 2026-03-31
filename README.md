@@ -28,7 +28,38 @@ A focus timer app that transforms your productivity sessions into a rewarding jo
 
 ## Screenshots
 
-*Coming soon*
+<table>
+  <tr>
+    <td align="center"><strong>Focus</strong></td>
+    <td align="center"><strong>Statistics</strong></td>
+    <td align="center"><strong>Statistics Details</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/focus-home.jpg" alt="Focus screen" width="240"></td>
+    <td><img src="docs/screenshots/statistics-overview.jpg" alt="Statistics overview" width="240"></td>
+    <td><img src="docs/screenshots/statistics-details.jpg" alt="Statistics details" width="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Rewards</strong></td>
+    <td align="center"><strong>Unlock Progress</strong></td>
+    <td align="center"><strong>More Unlocks</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/rewards-hero.jpg" alt="Rewards hero" width="240"></td>
+    <td><img src="docs/screenshots/rewards-unlocks-1.jpg" alt="Rewards unlock progress" width="240"></td>
+    <td><img src="docs/screenshots/rewards-unlocks-2.jpg" alt="More rewards unlocks" width="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Settings</strong></td>
+    <td align="center"><strong>Settings Details</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/settings-overview.jpg" alt="Settings overview" width="240"></td>
+    <td><img src="docs/screenshots/settings-details.jpg" alt="Settings details" width="240"></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Privacy
 
