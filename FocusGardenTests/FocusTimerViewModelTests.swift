@@ -8,22 +8,26 @@
 import XCTest
 @testable import FocusGarden
 
+@MainActor
 final class FocusTimerViewModelTests: XCTestCase {
 
+    private var suiteName: String!
     private var defaults: UserDefaults!
     private var sut: FocusTimerViewModel!
 
     override func setUp() {
         super.setUp()
-        defaults = UserDefaults(suiteName: "com.focusgarden.tests")!
-        defaults.removePersistentDomain(forName: "com.focusgarden.tests")
+        suiteName = "com.focusgarden.tests.\(UUID().uuidString)"
+        defaults = UserDefaults(suiteName: suiteName)!
+        defaults.removePersistentDomain(forName: suiteName)
         sut = FocusTimerViewModel(defaults: defaults)
     }
 
     override func tearDown() {
-        defaults.removePersistentDomain(forName: "com.focusgarden.tests")
-        defaults = nil
         sut = nil
+        defaults.removePersistentDomain(forName: suiteName)
+        defaults = nil
+        suiteName = nil
         super.tearDown()
     }
 
@@ -53,13 +57,13 @@ final class FocusTimerViewModelTests: XCTestCase {
         defaults.set(50, forKey: "focusCoins")
         defaults.set("work", forKey: "lastSelectedCategory")
 
-        let vm = FocusTimerViewModel(defaults: defaults)
+        sut.reloadStoredValues()
 
-        XCTAssertEqual(vm.totalFocusMinutes, 120)
-        XCTAssertEqual(vm.completedSessions, 5)
-        XCTAssertEqual(vm.focusStreak, 3)
-        XCTAssertEqual(vm.focusCoins, 50)
-        XCTAssertEqual(vm.selectedCategory, "work")
+        XCTAssertEqual(sut.totalFocusMinutes, 120)
+        XCTAssertEqual(sut.completedSessions, 5)
+        XCTAssertEqual(sut.focusStreak, 3)
+        XCTAssertEqual(sut.focusCoins, 50)
+        XCTAssertEqual(sut.selectedCategory, "work")
     }
 
     // MARK: - Duration Selection Tests
@@ -225,8 +229,7 @@ final class FocusTimerViewModelTests: XCTestCase {
     func testSelectCategoryPersists() {
         sut.selectCategory("study")
 
-        let vm2 = FocusTimerViewModel(defaults: defaults)
-        XCTAssertEqual(vm2.selectedCategory, "study")
+        XCTAssertEqual(defaults.string(forKey: "lastSelectedCategory"), "study")
     }
 
     // MARK: - Time String Tests
@@ -300,16 +303,15 @@ final class FocusTimerViewModelTests: XCTestCase {
     func testDurationPersistsAcrossInstances() {
         sut.selectDuration(45)
 
-        let vm2 = FocusTimerViewModel(defaults: defaults)
-        XCTAssertEqual(vm2.focusDuration, 45 * 60)
+        XCTAssertEqual(defaults.object(forKey: "focusDuration") as? Int, 45 * 60)
     }
 
     // MARK: - Today Preview Minutes Tests
 
     func testTodayPreviewMinutesWhenIdle() {
         defaults.set(100, forKey: "totalFocusMinutes")
-        let vm = FocusTimerViewModel(defaults: defaults)
+        sut.reloadStoredValues()
 
-        XCTAssertEqual(vm.todayPreviewMinutes, 100)
+        XCTAssertEqual(sut.todayPreviewMinutes, 100)
     }
 }

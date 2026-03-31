@@ -48,8 +48,8 @@ struct HomeView: View {
                 viewModel.attach(modelContext: modelContext)
                 viewModel.reloadStoredValues()
             }
-            .onChange(of: scenePhase) { phase in
-                viewModel.handleScenePhaseChange(phase)
+            .onChange(of: scenePhase) {
+                viewModel.handleScenePhaseChange(scenePhase)
             }
             .onReceive(timer) { _ in
                 viewModel.handleTick()

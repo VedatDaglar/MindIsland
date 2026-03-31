@@ -76,8 +76,8 @@ struct SettingsView: View {
                                     settingRow(icon: "speaker.wave.2.fill", color: AppTheme.accentBreakBright, title: localized("settings.ambientSounds"), subtitle: localized("settings.ambientSounds.detail"))
                                 }
                                 .tint(AppTheme.accent)
-                                .onChange(of: ambientSoundsEnabled) { newValue in
-                                    if newValue { FocusSoundPlayer.shared.startAmbient() }
+                                .onChange(of: ambientSoundsEnabled) {
+                                    if ambientSoundsEnabled { FocusSoundPlayer.shared.startAmbient() }
                                     else { FocusSoundPlayer.shared.stopAmbient() }
                                 }
 
@@ -87,8 +87,8 @@ struct SettingsView: View {
                                     settingRow(icon: "bell.badge.fill", color: AppTheme.accentBright, title: localized("settings.notifications"), subtitle: localized("settings.notifications.detail"))
                                 }
                                 .tint(AppTheme.accent)
-                                .onChange(of: notificationsEnabled) { newValue in
-                                    if newValue {
+                                .onChange(of: notificationsEnabled) {
+                                    if notificationsEnabled {
                                         Task {
                                             let granted = await FocusNotificationManager.shared.requestAuthorizationIfNeeded()
                                             if !granted { notificationsEnabled = false }
