@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import UserNotifications
+import AVFoundation
 
 final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     func application(
@@ -16,6 +17,13 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
     ) -> Bool {
         UNUserNotificationCenter.current().delegate = self
         migrateSharedDefaults()
+        configureAudioSessionForBackground()
+
+        // Set default appearance mode if not set
+        if SharedStore.defaults?.string(forKey: "appearanceMode") == nil {
+            SharedStore.defaults?.set("dark", forKey: "appearanceMode")
+        }
+
         return true
     }
 
@@ -36,29 +44,101 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
             }
         }
     }
+
+    /// Configure the audio session for background playback so ambient sounds
+    /// can keep playing when the app is in the background.
+    /// IMPORTANT: Do NOT use .mixWithOthers — it can prevent iOS from keeping the app alive for audio.
+    private func configureAudioSessionForBackground() {
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(.playback, mode: .default, options: [])
+            try session.setActive(true)
+        } catch {
+            print("Audio session background config failed: \(error)")
+        }
+    }
+
+    /// Called when the app enters background — ensure audio session stays active.
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setActive(true, options: [])
+        } catch {
+            print("Failed to keep audio session active in background: \(error)")
+        }
+    }
+
+    /// Called when the app returns to foreground — reactivate audio session.
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        configureAudioSessionForBackground()
+    }
 }
 
 @main
 struct FocusGardenApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
-    var sharedModelContainer: ModelContainer = {
+    let sharedModelContainer: ModelContainer?
+    private let dataError: String?
+
+    init() {
         let schema = Schema([
             FocusSession.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            self.sharedModelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            self.dataError = nil
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            // Fallback: in-memory container so the app doesn't crash
+            print("⚠️ Could not create persistent ModelContainer: \(error)")
+            self.sharedModelContainer = try? ModelContainer(
+                for: schema,
+                configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)]
+            )
+            self.dataError = error.localizedDescription
         }
-    }()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if let container = sharedModelContainer {
+                if let errorMessage = dataError {
+                    DataErrorView(errorMessage: errorMessage)
+                        .modelContainer(container)
+                } else {
+                    ContentView()
+                        .modelContainer(container)
+                }
+            } else {
+                DataErrorView(errorMessage: "Uygulama verileri yüklenemedi.")
+            }
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+/// Veri hatası durumunda kullanıcıya gösterilen ekran
+struct DataErrorView: View {
+    let errorMessage: String
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 56))
+                .foregroundStyle(.orange)
+            Text("Bir sorun oluştu")
+                .font(.title2.bold())
+            Text("Veriler yüklenirken bir hata meydana geldi. Lütfen uygulamayı yeniden başlatın.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+            Text(errorMessage)
+                .font(.caption)
+                .foregroundStyle(.tertiary)
+                .padding(.horizontal, 32)
+        }
+        .padding()
     }
 }

@@ -89,3 +89,74 @@
 "notification.break.body" = "准备好重新专注了吗？随时可以开始新的时段。";
 "stats.weeklyChart.title" = "最近 7 天";
 "stats.noData" = "暂无记录。\n完成第一次专注后\n进度将在这里显示。";
+
+// Deep Focus
+"settings.deepFocus" = "深度专注模式";
+"settings.deepFocus.detail" = "离开应用时取消专注时段。";
+"home.status.failed" = "时段失败，请重试。";
+"failed.title" = "时段失败";
+"failed.message" = "你在深度专注期间离开了应用，你的岛屿生长被打断了。";
+
+// Auto Pomodoro
+"settings.autoPomodoro" = "自动连贯模式";
+"settings.autoPomodoro.detail" = "自动开始休息和下一个时段。";
+
+// Categories
+"category.general" = "通用";
+"category.work" = "工作";
+"category.study" = "学习";
+"category.reading" = "阅读";
+"category.other" = "其他";
+
+"stats.categories" = "分类统计";
+
+// Store & Gamification
+"tab.store" = "商店";
+"tab.rewards" = "奖励";
+"rewards.title" = "奖励";
+"rewards.hero.title" = "专注解锁";
+"rewards.hero.subtitle" = "用累计专注时长解锁新的主题和环境音。";
+"rewards.unlocked" = "已解锁";
+"rewards.nextUnlock" = "下一个";
+"rewards.allUnlocked" = "全部开放";
+"rewards.unlockFocus" = "专注 %d 分钟即可解锁";
+"rewards.locked" = "已锁定";
+"store.title" = "商店";
+"store.hero.subtitle" = "用代币解锁新的岛屿主题和环境音效。";
+"store.tokens" = "%d 代币";
+"store.themes" = "岛屿主题";
+"store.sounds" = "环境声音";
+"store.equipped" = "已装备";
+"store.equip" = "装备";
+"store.buy" = "%d 购买";
+"store.notEnough" = "代币不足";
+"store.buyTokens" = "获取代币";
+"store.tokensUnit" = "代币";
+"store.loadingProducts" = "正在加载商品…";
+"store.restore" = "恢复购买";
+
+// Themes
+"theme.zen" = "禅意";
+"theme.neon" = "霓虹雨夜";
+"theme.campfire" = "营火";
+"theme.void" = "深度专注";
+"theme.cafe" = "咖啡馆";
+
+// Sounds
+"sound.cafe" = "咖啡馆氛围";
+"sound.heavy_rain" = "暴雨倾盆";
+"sound.campfire" = "营火";
+"sound.zen_garden" = "禅意花园";
+"sound.brown_noise" = "棕色噪音";
+
+// Appearance
+"settings.appearance" = "外观";
+"settings.appearance.title" = "主题模式";
+"settings.appearance.detail" = "在浅色和深色模式之间切换。";
+"settings.appearance.light" = "浅色";
+"settings.appearance.dark" = "深色";
+
+// Music & Sounds section
+"settings.musicSounds" = "音乐与声音";
+"settings.allAtmospheres" = "所有氛围和声音";
+"settings.generatedBy" = "由以下提供";

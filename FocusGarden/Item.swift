@@ -13,10 +13,12 @@ final class FocusSession {
     var date: Date
     var durationMinutes: Int
     var completed: Bool
+    var category: String
 
-    init(date: Date, durationMinutes: Int, completed: Bool = false) {
+    init(date: Date, durationMinutes: Int, completed: Bool = false, category: String = "general") {
         self.date = date
         self.durationMinutes = durationMinutes
         self.completed = completed
+        self.category = category
     }
 }

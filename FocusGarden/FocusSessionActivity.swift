@@ -7,6 +7,7 @@ struct FocusSessionActivityAttributes: ActivityAttributes {
         var endDate: Date
         var isRunning: Bool
         var sessionTitle: String
+        var dailyTotalMinutes: Int?
     }
 
     var sessionName: String

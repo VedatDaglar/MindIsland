@@ -89,3 +89,74 @@
 "notification.break.body" = "Odaklanmaya hazır hissediyorsan yeni bir seans başlatabilirsin.";
 "stats.weeklyChart.title" = "Son 7 Gün";
 "stats.noData" = "Henüz kayıtlı seans yok.\nİlk seansını tamamladığında\nburada görüntülenecek.";
+
+// Deep Focus
+"settings.deepFocus" = "Derin odak modu";
+"settings.deepFocus.detail" = "Uygulamadan çıkarsan seans iptal olur.";
+"home.status.failed" = "Seans başarısız. Tekrar dene.";
+"failed.title" = "Seans Başarısız";
+"failed.message" = "Derin odak modundayken uygulamadan çıktın. Adanın gelişimi yarım kaldı.";
+
+// Auto Pomodoro
+"settings.autoPomodoro" = "Otomatik akış modu";
+"settings.autoPomodoro.detail" = "Molaları ve seansları otomatik olarak başlat.";
+
+// Categories
+"category.general" = "Genel";
+"category.work" = "İş";
+"category.study" = "Ders";
+"category.reading" = "Okuma";
+"category.other" = "Diğer";
+
+"stats.categories" = "Kategori Dağılımı";
+
+// Store & Gamification
+"tab.store" = "Mağaza";
+"tab.rewards" = "Ödüller";
+"rewards.title" = "Ödüller";
+"rewards.hero.title" = "Odaklanarak Aç";
+"rewards.hero.subtitle" = "Yeni temaları ve ortam seslerini toplam odak sürenle aç.";
+"rewards.unlocked" = "Açılanlar";
+"rewards.nextUnlock" = "Sıradaki";
+"rewards.allUnlocked" = "Hepsi Açık";
+"rewards.unlockFocus" = "%d dk odaklanarak aç";
+"rewards.locked" = "Kilitli";
+"store.title" = "Mağaza";
+"store.hero.subtitle" = "Jetonlarını yeni ada temaları ve ortam seslerine harca.";
+"store.tokens" = "%d Jeton";
+"store.themes" = "Ada Temaları";
+"store.sounds" = "Ortam Sesleri";
+"store.equipped" = "Kullanımda";
+"store.equip" = "Kullan";
+"store.buy" = "%d'ye Al";
+"store.notEnough" = "Yetersiz Jeton";
+"store.buyTokens" = "Jeton Al";
+"store.tokensUnit" = "Jeton";
+"store.loadingProducts" = "Ürünler yükleniyor…";
+"store.restore" = "Satın Alımları Geri Yükle";
+
+// Themes
+"theme.zen" = "Zen";
+"theme.neon" = "Neon Yağmur";
+"theme.campfire" = "Kamp Ateşi";
+"theme.void" = "Derin Odak";
+"theme.cafe" = "Kafe Akışı";
+
+// Sounds
+"sound.cafe" = "Kafe Akışı";
+"sound.heavy_rain" = "Şiddetli Yağmur";
+"sound.campfire" = "Kamp Ateşi";
+"sound.zen_garden" = "Zen Bahçesi";
+"sound.brown_noise" = "Kahverengi Gürültü";
+
+// Appearance
+"settings.appearance" = "Görünüm";
+"settings.appearance.title" = "Tema Modu";
+"settings.appearance.detail" = "Açık veya koyu mod arasında seçim yap.";
+"settings.appearance.light" = "Açık";
+"settings.appearance.dark" = "Koyu";
+
+// Music & Sounds section
+"settings.musicSounds" = "Müzik ve Sesler";
+"settings.allAtmospheres" = "Tüm Atmosferler ve Sesler";
+"settings.generatedBy" = "Oluşturan:";
