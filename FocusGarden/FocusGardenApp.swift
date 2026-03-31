@@ -112,13 +112,13 @@ struct FocusGardenApp: App {
                         .modelContainer(container)
                 }
             } else {
-                DataErrorView(errorMessage: "Uygulama verileri yüklenemedi.")
+                DataErrorView(errorMessage: NSLocalizedString("error.fallback", comment: ""))
             }
         }
     }
 }
 
-/// Veri hatası durumunda kullanıcıya gösterilen ekran
+/// Error screen shown when data fails to load
 struct DataErrorView: View {
     let errorMessage: String
 
@@ -127,9 +127,9 @@ struct DataErrorView: View {
             Image(systemName: "exclamationmark.triangle.fill")
                 .font(.system(size: 56))
                 .foregroundStyle(.orange)
-            Text("Bir sorun oluştu")
+            Text(NSLocalizedString("error.title", comment: ""))
                 .font(.title2.bold())
-            Text("Veriler yüklenirken bir hata meydana geldi. Lütfen uygulamayı yeniden başlatın.")
+            Text(NSLocalizedString("error.message", comment: ""))
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)

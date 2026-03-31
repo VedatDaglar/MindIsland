@@ -38,11 +38,20 @@ func activeLocalizationBundle() -> Bundle {
     return bundle
 }
 
+func activeAppLocale() -> Locale {
+    let stored = SharedStore.defaults?.string(forKey: "appLanguage") ?? AppLanguage.system.rawValue
+    let lang = AppLanguage(rawValue: stored) ?? .system
+    if let localeIdentifier = lang.localeIdentifier {
+        return Locale(identifier: localeIdentifier)
+    }
+    return .autoupdatingCurrent
+}
+
 func localized(_ key: String) -> String {
     activeLocalizationBundle().localizedString(forKey: key, value: nil, table: nil)
 }
 
 func localizedFormat(_ key: String, _ arguments: CVarArg...) -> String {
     let fmt = activeLocalizationBundle().localizedString(forKey: key, value: nil, table: nil)
-    return String(format: fmt, locale: Locale.current, arguments: arguments)
+    return String(format: fmt, locale: activeAppLocale(), arguments: arguments)
 }

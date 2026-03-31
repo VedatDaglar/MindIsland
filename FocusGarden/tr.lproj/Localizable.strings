@@ -16,16 +16,16 @@
 "celebration.total" = "Toplam";
 "home.status.running" = "Telefonu biraz bırak,\nadan biraz daha canlansın.";
 "home.status.completed" = "Harika. Ada bugün biraz daha büyüdü.\nYeni bir seansa hazırsın.";
-"home.status.ready" = "Hazırsan %d dakikalık\nilk seansı başlatalım.";
+"home.status.ready" = "Hazırsan %d dakikalık\nbir seans başlatalım.";
 "home.hero.subtitle" = "Kısa, sakin ve düzenli odak seanslarıyla ritmini kur.";
 "home.hero.badge" = "Bugünkü toplam";
 "home.hero.focus" = "Seans";
 "home.hero.streak" = "Seri";
 "home.duration.title" = "Seans süresi";
-"home.footer.running" = "İstersen seansı durdurabilirsin, istersen akışta kal.";
-"home.footer.ready" = "Başlatınca yumuşak bir ses çalar, seans sonunda da nazik bir bildirim gelir.";
+"home.footer.running" = "Dilersen seansı durdurabilir, dilersen akışta kalabilirsin.";
+"home.footer.ready" = "Başladığında yumuşak bir ses çalacak, seans bittiğinde de nazik bir bildirim gelecek.";
 "home.tip.title" = "Akış ipucu";
-"home.tip.notificationsOn" = "Bildirimler açık. Seans bittiğinde sessiz olmayan ama yormayan bir uyarı alırsın.";
+"home.tip.notificationsOn" = "Bildirimler açık. Seans bittiğinde yumuşak bir uyarı alacaksın.";
 "home.tip.notificationsOff" = "Dilersen Ayarlar'dan bildirimleri açıp seans bitiş uyarısı ekleyebilirsin.";
 "home.timer.remaining" = "Kalan süre";
 "home.timer.completed" = "Seans tamamlandı";
@@ -33,15 +33,15 @@
 "home.stopSession" = "Seansı Durdur";
 "home.startSession" = "%d Dakikalık Seansı Başlat";
 "notification.complete.title" = "Seansın tamamlandı";
-"notification.complete.body" = "%d dakikalık odak turun bitti. Hazırsan yeni bir seans başlatabilirsin.";
+"notification.complete.body" = "%d dakikalık odak seansın tamamlandı. Hazır olduğunda yeni bir seans başlatabilirsin.";
 "stats.title" = "İstatistikler";
-"stats.hero.subtitle" = "İlerlemeni tek bakışta gör, ritmini küçük ama net adımlarla koru.";
+"stats.hero.subtitle" = "İlerlemeni bir bakışta gör, küçük ama düzenli adımlarla ritmini koru.";
 "stats.totalFocus" = "Toplam odak";
 "stats.totalFocus.detail" = "Tüm seansların toplamı";
 "stats.completedSessions" = "Tamamlanan seans";
 "stats.completedSessions.detail" = "Bitirdiğin odak turları";
 "stats.activeStreak" = "Aktif seri";
-"stats.activeStreak.detail" = "Üst üste ilerleme sayın";
+"stats.activeStreak.detail" = "Üst üste ilerleme kaydettiğin gün sayısı";
 "stats.insight.title" = "Kısa yorum";
 "stats.insight.high" = "Odak ritmin güçleniyor. Artık haftalık hedefler ve daha uzun seanslar eklemek mantıklı.";
 "stats.insight.medium" = "Düzen oturmaya başlıyor. Aynı saatlerde odak seansı açmak seriyi korumayı kolaylaştırır.";
@@ -53,9 +53,9 @@
 "settings.language.english" = "İngilizce";
 "settings.language.chinese" = "Çince";
 "settings.ambientSounds" = "Ambiyans sesleri";
-"settings.ambientSounds.detail" = "Seans başında ve bitişinde kısa, yumuşak uygulama sesleri çal.";
+"settings.ambientSounds.detail" = "Seans başlarken ve biterken kısa, yumuşak sesler çalsın.";
 "settings.notifications" = "Seans bildirimleri";
-"settings.notifications.detail" = "Seans bittiğinde sesli yerel bildirim gönder.";
+"settings.notifications.detail" = "Seans bittiğinde sesli bir bildirim gönderilsin.";
 "settings.account" = "Hesap";
 "settings.totalFocus" = "Toplam odak: %d dk";
 "settings.completedSessions" = "Tamamlanan seans: %d";
@@ -63,9 +63,9 @@
 "settings.data" = "Veri";
 "settings.reset" = "Tüm ilerlemeyi sıfırla";
 "settings.title" = "Ayarlar";
-"settings.hero.subtitle" = "Dil, ses ve bildirim tercihlerini buradan sakin bir şekilde yönet.";
+"settings.hero.subtitle" = "Dil, ses ve bildirim tercihlerini tek bir yerden yönet.";
 "settings.reset.confirmTitle" = "Tüm ilerleme sıfırlansın mı?";
-"settings.reset.confirmMessage" = "Bu işlem toplam odak, seans ve seri bilgilerini temizler.";
+"settings.reset.confirmMessage" = "Bu işlem toplam odak süresini, seans sayısını ve seri bilgilerini sıfırlar.";
 "widget.today" = "Bugün";
 "widget.totalFocus" = "Toplam odak";
 "widget.sessions" = "Seans";
@@ -86,16 +86,16 @@
 "home.duration.customTitle" = "Özel Süre";
 "home.duration.minutes" = "dakika";
 "notification.break.title" = "Molan bitti";
-"notification.break.body" = "Odaklanmaya hazır hissediyorsan yeni bir seans başlatabilirsin.";
+"notification.break.body" = "Tekrar odaklanmaya hazırsan yeni bir seans başlatabilirsin.";
 "stats.weeklyChart.title" = "Son 7 Gün";
 "stats.noData" = "Henüz kayıtlı seans yok.\nİlk seansını tamamladığında\nburada görüntülenecek.";
 
 // Deep Focus
 "settings.deepFocus" = "Derin odak modu";
 "settings.deepFocus.detail" = "Uygulamadan çıkarsan seans iptal olur.";
-"home.status.failed" = "Seans başarısız. Tekrar dene.";
-"failed.title" = "Seans Başarısız";
-"failed.message" = "Derin odak modundayken uygulamadan çıktın. Adanın gelişimi yarım kaldı.";
+"home.status.failed" = "Seans yarıda kaldı. Tekrar dene.";
+"failed.title" = "Seans Yarıda Kaldı";
+"failed.message" = "Derin odak modundayken uygulamadan ayrıldın. Adanın büyümesi durdu.";
 
 // Auto Pomodoro
 "settings.autoPomodoro" = "Otomatik akış modu";
@@ -128,7 +128,7 @@
 "store.sounds" = "Ortam Sesleri";
 "store.equipped" = "Kullanımda";
 "store.equip" = "Kullan";
-"store.buy" = "%d'ye Al";
+"store.buy" = "%d Jetona Al";
 "store.notEnough" = "Yetersiz Jeton";
 "store.buyTokens" = "Jeton Al";
 "store.tokensUnit" = "Jeton";
@@ -152,11 +152,16 @@
 // Appearance
 "settings.appearance" = "Görünüm";
 "settings.appearance.title" = "Tema Modu";
-"settings.appearance.detail" = "Açık veya koyu mod arasında seçim yap.";
+"settings.appearance.detail" = "Açık ve koyu mod arasında geçiş yap.";
 "settings.appearance.light" = "Açık";
 "settings.appearance.dark" = "Koyu";
 
 // Music & Sounds section
 "settings.musicSounds" = "Müzik ve Sesler";
 "settings.allAtmospheres" = "Tüm Atmosferler ve Sesler";
-"settings.generatedBy" = "Oluşturan:";
+"settings.generatedBy" = "Sağlayan:";
+
+// Data Error
+"error.title" = "Bir sorun oluştu";
+"error.message" = "Veriler yüklenirken bir hata meydana geldi. Lütfen uygulamayı yeniden başlatın.";
+"error.fallback" = "Uygulama verileri yüklenemedi.";

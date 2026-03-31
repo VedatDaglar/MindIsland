@@ -184,7 +184,9 @@ struct StatsView: View {
     private var last7DaysData: [DayData] {
         let cal   = Calendar.current
         let today = cal.startOfDay(for: Date())
-        let fmt   = DateFormatter(); fmt.dateFormat = "E"
+        let fmt   = DateFormatter()
+        fmt.locale = activeAppLocale()
+        fmt.dateFormat = "E"
         return (0..<7).reversed().map { offset in
             let day  = cal.date(byAdding: .day, value: -offset, to: today)!
             let mins = sessions.filter { $0.completed && cal.isDate($0.date, inSameDayAs: day) }.reduce(0) { $0 + $1.durationMinutes }

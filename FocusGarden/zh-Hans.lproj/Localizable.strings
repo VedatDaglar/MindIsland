@@ -17,7 +17,7 @@
 "home.status.running" = "先放下手机一会儿，\n让你的岛屿慢慢苏醒。";
 "home.status.completed" = "做得很好。你的岛屿今天又成长了。\n你已经准备好开始新的时段。";
 "home.status.ready" = "准备好了的话，\n我们开始 %d 分钟的专注时段吧。";
-"home.hero.subtitle" = "用短而稳定、安静不打扰的专注时段建立你的节奏。";
+"home.hero.subtitle" = "通过简短、平静且有规律的专注时段建立你的节奏。";
 "home.hero.badge" = "今日总计";
 "home.hero.focus" = "时段";
 "home.hero.streak" = "连续";
@@ -93,9 +93,9 @@
 // Deep Focus
 "settings.deepFocus" = "深度专注模式";
 "settings.deepFocus.detail" = "离开应用时取消专注时段。";
-"home.status.failed" = "时段失败，请重试。";
-"failed.title" = "时段失败";
-"failed.message" = "你在深度专注期间离开了应用，你的岛屿生长被打断了。";
+"home.status.failed" = "时段中断了，再试一次吧。";
+"failed.title" = "时段中断";
+"failed.message" = "你在深度专注期间离开了应用，岛屿的成长被暂停了。";
 
 // Auto Pomodoro
 "settings.autoPomodoro" = "自动连贯模式";
@@ -128,7 +128,7 @@
 "store.sounds" = "环境声音";
 "store.equipped" = "已装备";
 "store.equip" = "装备";
-"store.buy" = "%d 购买";
+"store.buy" = "花费 %d 购买";
 "store.notEnough" = "代币不足";
 "store.buyTokens" = "获取代币";
 "store.tokensUnit" = "代币";
@@ -159,4 +159,9 @@
 // Music & Sounds section
 "settings.musicSounds" = "音乐与声音";
 "settings.allAtmospheres" = "所有氛围和声音";
-"settings.generatedBy" = "由以下提供";
+"settings.generatedBy" = "音效来自";
+
+// Data Error
+"error.title" = "出现了问题";
+"error.message" = "加载数据时出错，请重新启动应用。";
+"error.fallback" = "无法加载应用数据。";
