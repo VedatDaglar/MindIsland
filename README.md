@@ -37,7 +37,7 @@ A focus timer app that transforms your productivity sessions into a rewarding jo
   <tr>
     <td><img src="docs/screenshots/focus-home.jpg" alt="Focus screen" width="240"></td>
     <td><img src="docs/screenshots/statistics-overview.jpg" alt="Statistics overview" width="240"></td>
-    <td><img src="docs/screenshots/statistics-details.jpg" alt="Statistics details" width="240"></td>
+    <td><img src="docs/screenshots/statistics-details-v2.jpg" alt="Statistics details" width="240"></td>
   </tr>
   <tr>
     <td align="center"><strong>Rewards</strong></td>
